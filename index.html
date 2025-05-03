@@ -18,17 +18,20 @@
                 position: relative;
             }
             .left-panel {
-                width: 250px;
-                background-color: #f4f4f4;
-                padding: 15px;
-                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                z-index: 1000;
-                transition: width 0.4s ease, padding 0.4s ease, transform 0.3s ease;
-                overflow: hidden;
-            }
+				width: 250px;
+				background-color: #f4f4f4;
+				padding: 15px;
+				box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+				display: flex;
+				flex-direction: column;
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				z-index: 1000;
+				transition: width 0.4s ease, padding 0.4s ease, transform 0.3s ease;
+				overflow: hidden;
+			}
             .left-panel .content {
                 flex: 1;
                 margin-top: 30px;
@@ -47,12 +50,13 @@
                 color: white;
             }
             .right-panel {
-                flex: 1;
-                padding: 15px;
-                background-color: #fff;
-                z-index: 1;
-                position: relative;
-            }
+				margin-left: 250px;
+				padding: 40px;
+				background-color: #fff;
+				z-index: 1;
+				position: relative;
+				transition: margin-left 0.4s ease; /* ← ADD smooth transition */
+			}
             .toggle-btn {
                 position: fixed;
                 left: 10px;
@@ -132,7 +136,52 @@
             <div class="right-panel" id="rightPanel">
                 <h3 id="about" style="text-align: center;">John Doe's Personal Site</h3>
                 <p>This is sentence.</p>
-                <h3 id="research" style="text-align: center; background: #cccccc;">RESEARCH</h3>
+				<p>GEORGETOWN, Ky. − Michael Blowen emerges from the garage of his home with a red Solo cup full of treats that have been ground up specifically for the 31-year-old horse he calls his favorite living thing in the world. 
+
+It’s quite a statement. Blowen, 78, has a wife and a family and befriended all sorts of famous people in his years as the film critic for the Boston Globe. But as he walks toward a grassy field a few hundred feet from his house, an almost completely white horse − who just happens to be the oldest living Kentucky Derby winner − perks up.
+
+Bowen smiles and opens the gate. The horse knows the routine. They start jogging, side by side, as quickly and energetically as two old men can move. After 10 or 15 seconds, they both give up. 
+
+“There’s a lot of kids, a lot of grandkids, a lot of everything, right?” Blowen says, explaining why the humans in his life have to take a back seat to the horse. "There’s only one Silver Charm, and he’s in my backyard.”
+
+It’s a big week for the horse who captured America's imagination in 1997 as he gutted out narrow victories in the Derby and Preakness. Though about 20,000 visitors come to see Silver Charm throughout the year here at Old Friends, the retirement farm for well-known Thoroughbreds that Blowen started back in 2003, Derby week is a different animal. </p>
+                <p>GEORGETOWN, Ky. − Michael Blowen emerges from the garage of his home with a red Solo cup full of treats that have been ground up specifically for the 31-year-old horse he calls his favorite living thing in the world. 
+
+It’s quite a statement. Blowen, 78, has a wife and a family and befriended all sorts of famous people in his years as the film critic for the Boston Globe. But as he walks toward a grassy field a few hundred feet from his house, an almost completely white horse − who just happens to be the oldest living Kentucky Derby winner − perks up.
+
+Bowen smiles and opens the gate. The horse knows the routine. They start jogging, side by side, as quickly and energetically as two old men can move. After 10 or 15 seconds, they both give up. 
+
+“There’s a lot of kids, a lot of grandkids, a lot of everything, right?” Blowen says, explaining why the humans in his life have to take a back seat to the horse. "There’s only one Silver Charm, and he’s in my backyard.”
+
+It’s a big week for the horse who captured America's imagination in 1997 as he gutted out narrow victories in the Derby and Preakness. Though about 20,000 visitors come to see Silver Charm throughout the year here at Old Friends, the retirement farm for well-known Thoroughbreds that Blowen started back in 2003, Derby week is a different animal. </p>
+<p>GEORGETOWN, Ky. − Michael Blowen emerges from the garage of his home with a red Solo cup full of treats that have been ground up specifically for the 31-year-old horse he calls his favorite living thing in the world. 
+
+It’s quite a statement. Blowen, 78, has a wife and a family and befriended all sorts of famous people in his years as the film critic for the Boston Globe. But as he walks toward a grassy field a few hundred feet from his house, an almost completely white horse − who just happens to be the oldest living Kentucky Derby winner − perks up.
+
+Bowen smiles and opens the gate. The horse knows the routine. They start jogging, side by side, as quickly and energetically as two old men can move. After 10 or 15 seconds, they both give up. 
+
+“There’s a lot of kids, a lot of grandkids, a lot of everything, right?” Blowen says, explaining why the humans in his life have to take a back seat to the horse. "There’s only one Silver Charm, and he’s in my backyard.”
+
+It’s a big week for the horse who captured America's imagination in 1997 as he gutted out narrow victories in the Derby and Preakness. Though about 20,000 visitors come to see Silver Charm throughout the year here at Old Friends, the retirement farm for well-known Thoroughbreds that Blowen started back in 2003, Derby week is a different animal. </p>
+<p>GEORGETOWN, Ky. − Michael Blowen emerges from the garage of his home with a red Solo cup full of treats that have been ground up specifically for the 31-year-old horse he calls his favorite living thing in the world. 
+
+It’s quite a statement. Blowen, 78, has a wife and a family and befriended all sorts of famous people in his years as the film critic for the Boston Globe. But as he walks toward a grassy field a few hundred feet from his house, an almost completely white horse − who just happens to be the oldest living Kentucky Derby winner − perks up.
+
+Bowen smiles and opens the gate. The horse knows the routine. They start jogging, side by side, as quickly and energetically as two old men can move. After 10 or 15 seconds, they both give up. 
+
+“There’s a lot of kids, a lot of grandkids, a lot of everything, right?” Blowen says, explaining why the humans in his life have to take a back seat to the horse. "There’s only one Silver Charm, and he’s in my backyard.”
+
+It’s a big week for the horse who captured America's imagination in 1997 as he gutted out narrow victories in the Derby and Preakness. Though about 20,000 visitors come to see Silver Charm throughout the year here at Old Friends, the retirement farm for well-known Thoroughbreds that Blowen started back in 2003, Derby week is a different animal. </p>
+<p>GEORGETOWN, Ky. − Michael Blowen emerges from the garage of his home with a red Solo cup full of treats that have been ground up specifically for the 31-year-old horse he calls his favorite living thing in the world. 
+
+It’s quite a statement. Blowen, 78, has a wife and a family and befriended all sorts of famous people in his years as the film critic for the Boston Globe. But as he walks toward a grassy field a few hundred feet from his house, an almost completely white horse − who just happens to be the oldest living Kentucky Derby winner − perks up.
+
+Bowen smiles and opens the gate. The horse knows the routine. They start jogging, side by side, as quickly and energetically as two old men can move. After 10 or 15 seconds, they both give up. 
+
+“There’s a lot of kids, a lot of grandkids, a lot of everything, right?” Blowen says, explaining why the humans in his life have to take a back seat to the horse. "There’s only one Silver Charm, and he’s in my backyard.”
+
+It’s a big week for the horse who captured America's imagination in 1997 as he gutted out narrow victories in the Derby and Preakness. Though about 20,000 visitors come to see Silver Charm throughout the year here at Old Friends, the retirement farm for well-known Thoroughbreds that Blowen started back in 2003, Derby week is a different animal. </p>
+				<h3 id="research" style="text-align: center; background: #cccccc;">RESEARCH</h3>
                 <p>This is sentence.</p>
                 <h3 id="experience" style="text-align: center; background: #cccccc;">EXPERIENCE</h3>
                 <p>This is sentence.</p>
@@ -155,22 +204,24 @@
             let isDesktopMinimized = false;
 
             toggleLeftPanelBtn.addEventListener("click", function () {
-                if (window.innerWidth <= 768) {
-                    leftPanel.classList.toggle("open");
-                    backdrop.classList.toggle("visible", leftPanel.classList.contains("open"));
-                    document.body.classList.toggle("menu-open", leftPanel.classList.contains("open"));
-                } else {
-                    if (!isDesktopMinimized) {
-                        leftPanel.style.width = "0px";
-                        leftPanel.style.padding = "0px";
-                        isDesktopMinimized = true;
-                    } else {
-                        leftPanel.style.width = "250px";
-                        leftPanel.style.padding = "15px";
-                        isDesktopMinimized = false;
-                    }
-                }
-            });
+				if (window.innerWidth <= 768) {
+					leftPanel.classList.toggle("open");
+					backdrop.classList.toggle("visible", leftPanel.classList.contains("open"));
+					document.body.classList.toggle("menu-open", leftPanel.classList.contains("open"));
+				} else {
+					if (!isDesktopMinimized) {
+						leftPanel.style.width = "0px";
+						leftPanel.style.padding = "0px";
+						rightPanel.style.marginLeft = "0px"; // ← ADD THIS
+						isDesktopMinimized = true;
+					} else {
+						leftPanel.style.width = "250px";
+						leftPanel.style.padding = "15px";
+						rightPanel.style.marginLeft = "250px"; // ← ADD THIS
+						isDesktopMinimized = false;
+					}
+				}
+			});
 
             backdrop.addEventListener("click", () => {
                 leftPanel.classList.remove("open");
