@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    color: #222;
+}
+
+/* Top navigation panel */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 1000;
+}
+
+.site-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+
+.nav-tabs a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #444;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    font-size: 0.95rem;
+}
+
+.nav-tabs a:hover {
+    border-bottom-color: #999;
+}
+
+.nav-tabs a.active {
+    border-bottom-color: #000;
+    font-weight: 600;
+}
+
+/* Left panel */
+.left-panel {
+    position: fixed;
+    top: 56px; /* below top-nav */
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    border-right: 1px solid #eee;
+    background: #ffffff;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+/*
+.profile-photo img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 0.75rem;
+    background: #ddd;
+}
+*/
+
+.profile-photo img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;   /* makes it circular */
+    aspect-ratio: 1 / 1;  /* forces perfect square */
+    object-fit: cover;    /* ensures image fills the circle */
+    display: block;
+    margin: 0 auto 0.75rem;
+    background: #ddd;
+}
+
+.profile-info {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.profile-info h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.profile-info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.profile-links h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+.profile-links ul {
+    list-style: none;
+}
+
+.profile-links li + li {
+    margin-top: 0.25rem;
+}
+
+.profile-links a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #0056b3;
+}
+
+.profile-links a:hover {
+    text-decoration: underline;
+}
+
+/* Memberships block spacing */
+.membership_links {
+    margin-top: 1rem;
+}
+
+/* Main content (right panel) */
+.content {
+    margin-top: 56px; /* height of top-nav */
+    margin-left: 320px; /* width of left panel */
+    padding: 1.5rem;
+    min-height: calc(100vh - 56px);
+}
+
+.content h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.content h2 {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.content p {
+    margin-bottom: 0.75rem;
+}
+
+.content ul,
+.content ol {
+    margin-left: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.timeline li + li {
+    margin-top: 0.75rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .left-panel {
+        width: 200px;
+    }
+    .content {
+        margin-left: 200px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Stack left panel below top-nav but keep it fixed for vertical scroll */
+    .left-panel {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile-photo img {
+        max-width: 80px;
+        margin: 0;
+    }
+
+    .profile-info {
+        text-align: left;
+        margin-bottom: 0;
+        flex: 1;
+    }
+
+    .profile-links {
+        display: none; /* hide links on very small screens to keep things simple */
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 56px;
+        padding: 1rem;
+    }
+
+    body {
+        padding-top: 56px;
+    }
+}
+
+
+/* Added for responsive navigation toggle */
+.nav-tabs {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* Small screens: turn nav into left drawer with toggle button */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .top-nav {
+        justify-content: flex-start;
+    }
+
+    .nav-tabs {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        background: #f5f5f5;
+        border-right: 1px solid #ddd;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-out;
+        z-index: 1100;
+    }
+
+    body.nav-open .nav-tabs {
+        transform: translateX(0);
+    }
+
+    .nav-tabs a {
+        margin-left: 0;
+        margin-bottom: 0.75rem;
+    }
+}
+
+
+@media (min-width:1024px){
+:root{
+ --total-width:1100px;
+ --left-width:320px;
+}
+.left-panel{
+ left:calc(50% - var(--total-width)/2);
+}
+.content{
+ margin-left:calc(50% - var(--total-width)/2 + var(--left-width));
+ max-width:calc(var(--total-width) - var(--left-width));
+}
+}
