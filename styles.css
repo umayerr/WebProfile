@@ -266,7 +266,7 @@ body {
 
 @media (min-width:1024px){
 :root{
- --total-width:1550px;
+ --total-width:1300px;
  --left-width:320px;
 }
 .left-panel{
