@@ -157,6 +157,11 @@ body {
     margin-bottom: 0.75rem;
 }
 
+#publications + ol > li + li,
+#presentations + ol > li + li {
+    margin-top: 12px;
+}
+
 .timeline li + li {
     margin-top: 0.75rem;
 }

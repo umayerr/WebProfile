@@ -1,89 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
+  </head>
+
+  <body>
     <!-- Top Navigation Panel -->
     <header class="top-nav">
-        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-        <div class="site-title">Umayer Reza</div>
-        <nav class="nav-tabs">
-            <a href="index.html" class="active">About</a>
-            <a href="research.html">Research</a>
-            <!--<a href="publication.html">Publication</a>
-            <a href="education.html">Education</a>-->
-        </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <div class="site-title">Umayer Reza | উমায়ের রেজা</div>
+      <nav class="nav-tabs">
+        <a href="index.html" class="active">About</a>
+        <a href="#publications">Publications</a>
+      </nav>
     </header>
 
     <!-- Left Panel -->
     <aside class="left-panel">
-        <div class="profile-photo">
-            <img src="resource/image/Umayer-Reza.png" alt="Profile photo of researcher" />
-        </div>
-        <div class="profile-info">
-            <h2>Umayer Reza</h2>
-            <p>
-				Ph.D. Candidate<br>
-				School of Computing and Info. Science<br>
-				University of Maine<br>
-				Contact: <a href="mailto:a.reza@maine.edu">Email</a>
-			</p>
-        </div>
-        <div class="profile-links">
-            <h3>Profiles</h3>
-            <ul>
-				<li>
-					<a href="https://scholar.google.com/citations?user=2rz5FD0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> &middot; 
-					<a href="https://www.researchgate.net/profile/Umayer-Reza" target="_blank" rel="noopener noreferrer">Research Gate</a>
-				</li>
-				<li>
-					<a href="https://orcid.org/0000-0003-4013-3513" target="_blank" rel="noopener noreferrer">ORCID</a> &middot; 
-					<a href="https://github.com/umayerr" target="_blank" rel="noopener noreferrer">GitHub</a> &middot; 
-					<a href="https://www.linkedin.com/in/umayer-reza" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-				</li>
-            </ul>
-        </div>
-        <div class="profile-links membership_links">
-            <h3>Memberships</h3>
-            <ul>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">ACM - Professional Member</a></li>
-                <li><a href="#" target="_blank" rel="noopener noreferrer">IAOA - Individual Member</a></li>
-            </ul>
-        </div>
-		<div class="profile-links membership_links">
-			<h3>On This Page</h3>
-			<ul>
-				<li>
-					<a href="#about">About</a> &middot;
-					<a href="#education">Education</a>
-				</li>
-			</ul>
-		</div>
+      <div class="profile-photo">
+        <img src="resource/image/umayer.png" alt="Profile photo of researcher" />
+      </div>
+
+      <div class="profile-info">
+        <h2>Umayer Reza</h2>
+        <p>
+          Ph.D. Candidate<br>
+          School of Computing and Info. Science<br>
+          University of Maine, Orono<br>
+          Contact: <a href="mailto:a.reza@maine.edu">Email</a>
+        </p>
+      </div>
+
+      <div class="profile-links">
+        <h3>Profiles</h3>
+        <ul>
+          <li>
+            <a href="https://scholar.google.com/citations?user=2rz5FD0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> &middot;
+            <a href="https://www.researchgate.net/profile/Umayer-Reza" target="_blank" rel="noopener noreferrer">Research Gate</a>
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0003-4013-3513" target="_blank" rel="noopener noreferrer">ORCID</a> &middot;
+            <a href="https://github.com/umayerr" target="_blank" rel="noopener noreferrer">GitHub</a> &middot;
+            <a href="https://www.linkedin.com/in/umayer-reza" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="profile-links membership_links">
+        <h3>Memberships</h3>
+        <ul>
+          <li><a href="https://www.acm.org/" target="_blank" rel="noopener noreferrer">ACM - Professional Member</a></li>
+          <li><a href="https://iaoa.org/" target="_blank" rel="noopener noreferrer">IAOA - Individual Member</a></li>
+        </ul>
+      </div>
+      
+      <div class="profile-links membership_links">
+        <h3>Curriculum Vitae</h3>
+        <a href="resource/pdf/Umayer_Reza_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+      </div>
+      
+      <br>
+      
+      <div class="last-updated">
+        <p><small>Last updated: <span id="last-updated"></span></small></p>
+      </div>
+      
+      <!--<div class="profile-links membership_links">
+        <h3>On This Page</h3>
+        <ul>
+          <li>
+            <a href="#about">About</a> &middot;
+            <a href="#publications">Publications</a>
+          </li>
+        </ul>
+      </div>-->
     </aside>
 
     <!-- Right Panel: main content changes per page -->
     <main class="content">
-        <section>
-            <h1 id="about">About</h1>
-            <p>
-                I am currently a Ph.D. candidate in the School of Computing and Information Science at the University of Maine, where I conduct research with Dr. Torsten Hahmann at the Spatial Knowledge and Artificial Intelligence (SKAI) Lab. My research lies at the intersection of knowledge representation, ontology engineering, and natural language processing. I focus on developing CelloGraph, a knowledge discovery system that extracts and structures knowledge from scientific publications—primarily in PDF format—related to cellulosic materials. Cellulose is a sustainable, renewable, and widely studied material with applications across multiple domains, yet much of the knowledge about it remains scattered across unstructured literature. This project seeks to address that challenge by enabling automated knowledge extraction and semantic integration, and it is funded by the U.S. Department of Agriculture (USDA NIFA & ARS) and the U.S. Forest Service.	
-            </p>
-            <p>
-                Beyond my primary research, I am broadly interested in machine learning, natural language processing, ontology engineering, and knowledge representation, particularly in interdisciplinary and data-intensive settings. I enjoy work that blends analytical thinking, thoughtful modeling, and robust software development. My long-term goal is to build intelligent systems that are transparent, reliable, and grounded in strong theoretical foundations, while remaining practical for real-world use. I am especially motivated by approaches that improve semantic interoperability and automated reasoning, enabling the transformation of raw, unstructured data into meaningful and actionable knowledge.
-            </p><br>
-			
-			<h1 id="education">Education</h1>
-            <ul>
-				<li>Ph.D. (<i>Ongoing</i>), Spatial Information Science and Engineering, University of Maine</li>
-                <li>M.S., Computer Science, American International University-Bangladesh, 2020 (<i>Summa Cum Laude</i>)</li>
-                <li>B.S., Computer Science and Engineering, American International University-Bangladesh, 2014</li>
-            </ul>
-        </section>
+      <section>
+        <h1 id="about">About</h1>
+        <p>
+          I am currently a Ph.D. candidate in the School of Computing and Information Science at the University of Maine, where I conduct research with Dr. Torsten Hahmann at the Spatial Knowledge and Artificial Intelligence (SKAI) Lab. My research lies at the intersection of knowledge representation, ontology engineering, and natural language processing. I focus on developing CelloGraph, a knowledge discovery system that extracts and structures knowledge from scientific publications—primarily in PDF format—related to cellulosic materials. Cellulose is a sustainable, renewable, and widely studied material with applications across multiple domains, yet much of the knowledge about it remains scattered across unstructured literature. This project seeks to address that challenge by enabling automated knowledge extraction and semantic integration, and it is funded by the U.S. Department of Agriculture (USDA NIFA & ARS) and the U.S. Forest Service.
+        </p>
+        <p>
+          Beyond my primary research, I am broadly interested in machine learning, natural language processing, ontology engineering, and knowledge representation, particularly in interdisciplinary and data-intensive settings. I enjoy work that blends analytical thinking, thoughtful modeling, and robust software development. My long-term goal is to build intelligent systems that are transparent, reliable, and grounded in strong theoretical foundations, while remaining practical for real-world use. I am especially motivated by approaches that improve semantic interoperability and automated reasoning, enabling the transformation of raw, unstructured data into meaningful and actionable knowledge.
+        </p>
+
+        <h2 id="education">Education</h2>
+        <ul>
+          <li>Ph.D., Spatial Information Science and Engineering, University of Maine, <i><b>Expected</b> December 2026</i></li>
+          <li>M.S., Computer Science, American International University—Bangladesh, 2020</li>
+          <li>B.S., Computer Science and Engineering, American International University—Bangladesh, 2014</li>
+        </ul>
+
+        <h2 id="awards">Awards and Fellowships</h2>
+        <ul>
+          <li>Future Faculty Fellows, University of Maine, Spring 2026</li>
+          <li><i>Summa Cum Laude</i> distinction for the M.S. in Computer Science</li>
+        </ul><br>
+
+        <h1 id="publications">Publications</h1>
+        <ol>
+          <li>
+            <b>U. Reza</b>, T. Hahmann, and J. Wang.
+            <b>A Provenance-Aware Approach for Representing and Querying Domain Entities in Knowledge Graphs</b>.
+            In: <i>Proceedings of FOIS 2026 Satellite events co-located with the 16th International Conference on Formal Ontology in Information Systems (FOIS 2026)</i>, Vitória, Brazil, September 2026.
+            <a href="https://foisconference.org/assets/pdfs/satellitepreprints/Paper-227.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li>
+            <b>U. Reza</b>, N. Pease, J. Wang, and T. Hahmann.
+            <b>AnNER: Supporting Efficient Entity Annotation and Review Workflows for Knowledge Graph Construction</b>.
+            In: <i>Proceedings of the 13th International Conference on Knowledge Capture (K-CAP 2025)</i>, Dayton, Ohio, USA, December 2025.
+            <a href="https://doi.org/10.1145/3731443.3771347" target="_blank" rel="noopener">PDF</a> &middot;
+            <a href="https://github.com/theSKAILab/AnNER" target="_blank" rel="noopener">GitHub</a> &middot;
+            <a href="https://theskailab.github.io/AnNER" target="_blank" rel="noopener">Try AnNER</a>
+          </li>
+          <li>
+            <b>U. Reza</b>, X. Zhang, and T. Hahmann.
+            <b>OnNER: An Ontology for Semantic Representation of Named Entities in Scholarly Publications</b>.
+            In: <i>Proceedings of the 14th International Conference on Formal Ontology in Information Systems (FOIS 2024)</i>, Enschede, Netherlands, July 2024.
+            <a href="https://www.doi.org/10.3233/FAIA241291" target="_blank" rel="noopener">PDF</a> &middot;
+            <a href="https://github.com/theSKAILab/OnNER" target="_blank" rel="noopener">GitHub</a> &middot;
+            <a href="https://theskailab.github.io/OnNER/onner-full.html" target="_blank" rel="noopener">Documentation</a>
+          </li>
+          <li>
+            <b>U. Reza</b> and T. Hahmann.
+            <b>Populating and Refining an Ontology of Cellulose Materials with Terms from Scientific Publications: Extended Abstract</b>.
+            FOIS 2023 Early Career Symposium. In: <i>Proceedings of the 9th Joint Ontology Workshops (JOWO 2023) co-located with FOIS 2023</i>, Sherbrooke, Quebec, Canada, July 2023.
+            <a href="https://ceur-ws.org/Vol-3637/paper37.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+        </ol>
+
+        <h2 id="presentations">Presentations</h2>
+        <ol>
+          <li>
+            <b>CelloGraph – A Knowledge Graph System for Cellulosic Materials</b><br>
+            Prototype demonstrated at
+            <a href="https://research.fs.usda.gov/fpl" target="_blank" rel="noopener">USDA Forest Products Laboratory</a> &middot;
+            <a href="resource/pdf/CelloGraph_FPL_2026.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li>
+            <b>AnNER: Supporting Efficient Entity Annotation and Review Workflows for Knowledge Graph Construction</b><br>
+            Paper presented at
+            <a href="https://www.k-cap.org/2025" target="_blank" rel="noopener">K-CAP '25</a> &middot;
+            <a href="resource/pdf/AnNER_K-CAP_2025.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li>
+            <b>AnNER and OnNER: Key Components in the Trustworthy Knowledge Graph Construction Pipeline</b><br>
+            Poster presentation &middot;
+            <a href="https://us2ts.org/2025/about" target="_blank" rel="noopener">US2TS '25</a> &middot;
+            <a href="resource/pdf/Traceable_KG_US2TS_2025.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li>
+            <b>Populating and Refining an Ontology of Cellulose Materials with Terms from Scientific Publications</b><br>
+            Poster presented at
+            <a href="https://fois2023.griis.ca" target="_blank" rel="noopener">FOIS '23</a> &middot;
+            <a href="resource/pdf/FOIS_2023.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li>
+            <b>The Scientific Publication Ontology (SciPub): Linking publications’ content to the domain ontologies</b><br>
+            Poster presented at
+            <a href="https://umaine.edu/umss/event/2023-umaine-student-symposium" target="_blank" rel="noopener">UMaine Student Symposium '23</a> &middot;
+            <a href="resource/pdf/UMSS_2023.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+          <li>
+            <b>CelloGraph – Accelerating Knowledge Discovery for Cellulosic Materials using AI and Knowledge Graphs</b><br>
+            Poster presented at
+            <a href="https://umaine.edu/biomaterials/event/manufacturing-renew3d/2022-05-23" target="_blank" rel="noopener">Manufacturing RENEW3D '22</a> &middot;
+            <a href="resource/pdf/CelloGraph_RENEW3D_2022.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+        </ol>
+      </section>
     </main>
-</body>
+  </body>
 </html>
